@@ -46,11 +46,13 @@ NBNOMBRES = 6
 nombres=[]
 operateurs = ['+', '-', '*', '/']
 operandes=list(range(1,11))+list(range(1,11))+[25,50,75,100]
-#cible=841
-#nombres = [50,25,3,7,100,10]
-for i in range(NBNOMBRES) :
-    nombres.append(operandes[random.randint(0,len(operandes)-1)])
-cible = random.randint(100,999)
+
+cible = 813
+nombres = [6, 5, 10, 9, 8, 3]
+
+#for i in range(NBNOMBRES) :
+#    nombres.append(operandes[random.randint(0,len(operandes)-1)])
+#cible = random.randint(100,999)
 
 res = trouveExpr (cible, nombres)
 print(cible, nombres, res, cpt)

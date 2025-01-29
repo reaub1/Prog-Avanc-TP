@@ -94,11 +94,3 @@ afficheJeu(jeu)
 afficheJeu(ref)
 
 jouer(ref, jeu)
-	
-
-
-
-
-
-
-

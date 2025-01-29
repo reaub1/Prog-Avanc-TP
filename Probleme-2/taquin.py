@@ -50,7 +50,7 @@ def est_solvable(jeu, ref):
     return (inversions % 2 == 0) if (dim % 2 == 1) else ((inversions + trou_y) % 2 == 0)
 
 # === Programme Principal ===
-jeu, ref = initTaquin("taquin4.txt")
+jeu, ref = initTaquin("taquin3.txt")
 afficheJeu(jeu)
 
 if not est_solvable(jeu, ref):

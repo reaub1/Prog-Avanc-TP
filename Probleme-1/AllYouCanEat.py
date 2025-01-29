@@ -1,9 +1,9 @@
 import math
 
 # k est le nombre d'élèves ingénieurs
-k = 50
+k = 5
 # n est le nombre maximum d'assiettes
-n = 100
+n = 1000
 # s est le seuil pour chaque élève ingénieur
 s = 50
 # Compteur global pour suivre le nombre total d'assiettes consommées
@@ -67,17 +67,21 @@ def find_sequentiel(n, k):
 
 def find_bloc(n):
     step = int(n ** 0.5)
+    print("STEP : " + str(step))
     last_survived = 0
 
     for i in range(step, n + 1, step):
         if not survives(i):
             break
-        last_survived = i
+        last_survived = i 
 
-    for i in range(last_survived + 1, min(last_survived + step, n + 1)):
-        if not survives(i):
-            return i
-    return n 
+    print(str(i))
+
+    for y in range(last_survived + 1, (last_survived + step) + 1):
+        if not survives(y):
+            return y
+
+    return n
 
 # Trouver la valeur critique des assiettes
 resultat = find_critical_dishes(n, k)

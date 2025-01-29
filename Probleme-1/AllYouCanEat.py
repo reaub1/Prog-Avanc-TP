@@ -1,11 +1,11 @@
 import math
 
 # k est le nombre d'élèves ingénieurs
-k = 5
+k = 2
 # n est le nombre maximum d'assiettes
-n = 1000
+n = 100
 # s est le seuil pour chaque élève ingénieur
-s = 50
+s = 64
 # Compteur global pour suivre le nombre total d'assiettes consommées
 plats_consommees = 0
 # Compteur des élèves perdus
@@ -30,7 +30,8 @@ def find_critical_dishes(n, k):
 def survives(x):
     global plats_consommees
     global eleves_perdus
-    plats_consommees += x
+
+    plats_consommees += 1
 
     if x >= s:
         eleves_perdus += 1
@@ -98,4 +99,5 @@ print("Nombre maximum d'assiettes mangeables trouvés : " + str(resultat))
 print("Nombre total d'assiettes consommées : " + str(plats_consommees))
 print("Nombre d'élèves ingénieurs perdus : " + str(eleves_perdus))
 print("Nombre d'élèves ingénieurs : " + str(k))
+print("Nombre de repas : " + str(plats_consommees) + " / nombre de morts : " + str(eleves_perdus))
 print("--------------------------------------------------------------")

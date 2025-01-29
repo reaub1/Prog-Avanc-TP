@@ -67,7 +67,6 @@ def find_sequentiel(n, k):
 
 def find_bloc(n):
     step = int(n ** 0.5)
-    print("STEP : " + str(step))
     last_survived = 0
 
     for i in range(step, n + 1, step):
